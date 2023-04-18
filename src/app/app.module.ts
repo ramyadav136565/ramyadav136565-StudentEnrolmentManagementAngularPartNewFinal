@@ -33,6 +33,9 @@ import { DialogComponent } from './dialog/dialog.component';
 import { CheckDComponent } from './check-d/check-d.component';
 import { BookComponent } from './book/book.component';
 import { BookAllocationComponent } from './book-allocation/book-allocation.component';
+import { UniversitiyServiceService } from './services/UniversityServices/universitiy-service.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -68,9 +71,10 @@ import { BookAllocationComponent } from './book-allocation/book-allocation.compo
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [UniversitiyServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
